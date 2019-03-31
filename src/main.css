@@ -1,0 +1,12 @@
+button{
+    width: 75px;
+    height: 35px;
+    margin: 10px;
+}
+
+input[type=text]{
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    padding: 3px;
+}
