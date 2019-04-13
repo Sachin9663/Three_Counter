@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Main from './main';
+import Main from './componant/main';
+import Header from './componant/Header/header';
 import './App.css';
 
 class App extends Component {
@@ -13,14 +14,12 @@ class App extends Component {
     increaseAll=()=>{
         this.setState({
             action:"increse",
-            counter:this.state.counter+1
         })
     }
 
     decreaseAll=()=>{
         this.setState({
             action:"decrese",
-            counter:this.state.counter-1
         })
     }
     render() {
@@ -28,11 +27,12 @@ class App extends Component {
 
         return (
             <div className="App">
+                <Header/>
                     <Main action={action} counter={counter}/>
                     <Main action={action} counter={counter}/>
                     <Main action={action} counter={counter}/>
-                    <button onClick={this.increaseAll}>Increse All</button>
-                    <button onClick={this.decreaseAll}>Decrese All</button>
+                    <button className='main' onClick={this.increaseAll}>Increse All</button>
+                    <button className='main' onClick={this.decreaseAll}>Decrese All</button>
             </div>
         );
     }

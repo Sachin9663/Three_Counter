@@ -1,5 +1,6 @@
 import React ,{ Component } from 'react';
 import './main.css'
+
 class Main extends Component{
    state={
        action:this.props.action,
@@ -32,11 +33,11 @@ class Main extends Component{
 
     render(){
         return(
-                <main>
+                <div>
                     <button onClick={this.increase}>+</button>
                     <input type="text" value={this.state.counter}/>
                     <button onClick={this.decrease}>-</button>
-                </main>
+                </div>
             )
     }
 }   
